@@ -17,7 +17,7 @@ class Transfer
     #we check valid? to make sure sufficient funds
     #we check status not complete to make sure transfer only happen once. must create a new transfer instance to send more money
     if !valid?
-      @status == "rejected"
+      @status = "rejected"
       return "Transaction rejected. Please check your account balance."
     else #valid amount, level one passed
       if @status == "complete"

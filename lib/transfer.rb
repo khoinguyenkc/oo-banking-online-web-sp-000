@@ -15,6 +15,5 @@ class Transfer
 
 
 
-  
-end
 
+end

@@ -1,6 +1,7 @@
 class BankAccount
-attr_reader :name, :balance
-#u can read but not change!
+attr_reader :name,
+#u can read but not change name!
+attr_accessor :balance
 
   def initialize(name)
     @name = name
@@ -15,6 +16,9 @@ attr_reader :name, :balance
   def display_balance
     puts "Your balance is $#{self.balance}."
   end
+
+  def valid?
+
 
   def close_account
     @status = "closed"

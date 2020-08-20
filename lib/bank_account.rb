@@ -18,6 +18,8 @@ attr_accessor :balance
   end
 
   def valid?
+    (@status != "closed" && @balance != 0)  ? true : false
+  end
 
 
   def close_account

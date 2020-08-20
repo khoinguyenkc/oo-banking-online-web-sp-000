@@ -9,7 +9,9 @@ class Transfer
     @status = "pending"
   end
 
-
+  def valid?
+    @sender.valid? && @receiver.valid? && @sender.balance >= @amount ? true : false
+  end
 
 
 

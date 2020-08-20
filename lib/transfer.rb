@@ -31,7 +31,7 @@ class Transfer
   end
 
 
-  def reverse_status
+  def reverse_transfer
     if @status != "complete" #only executed transactions (complete) can be reversed
       return
     else #ready to reversed

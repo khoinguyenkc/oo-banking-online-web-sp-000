@@ -28,9 +28,17 @@ class Transfer
         @status = "complete" #update status to prevent a second execute-transaction
       end
     end
-
   end
 
 
+  def reverse_status
+    if @status != "complete" #only executed transactions (complete) can be reversed
+      return
+    else #ready to reversed
+      @receiver.balance -= @amount
+      @sender.balance += @amount
+      @status == "reversed"
+
+  end
 
 end

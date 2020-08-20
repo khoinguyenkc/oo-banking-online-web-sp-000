@@ -1,6 +1,6 @@
 class BankAccount
 attr_reader :name, :balance
-#this is not secure lol. u can change the balance and name.
+#u can read but not change!
 
 def initialize(name)
   @name = name
